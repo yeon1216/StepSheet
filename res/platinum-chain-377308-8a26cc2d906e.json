@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "platinum-chain-377308",
+  "private_key_id": "8a26cc2d906efdeb2b925776b1f7d866cf8e1ee4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCuP5MdffwdmaQX\nCQkI6tqQNTdWns8Z3CY3tz4cllVAKJQKaIdQtl7XCDtR/ZRjqFBRA7bcRwALNGZ9\n85UELdzu502lC3Aye2bdrFzyxllvym3Zv4px2CqqolekyNjQU7uOEjkjtivHILts\n+aATueCFOFHTO6aA/pOxkMbw00nzAsF+vOhP86xFbNbZ/0/Q77RwjSqSW1p1ip1P\n8NUkhZoJXtLiS+Qca1y4W/c0dFJs/4cznlzdTFZPzrE4Kv6UC9hnqa+TpbUJqtWn\nfsPoBsmzZOXq7EsiYQQeBkIkzyY9nQlRglFm5Ct2eBqPHG9KJr8sTezU/ZLBm3+m\nvNjCNe4/AgMBAAECggEAVtWYx0w23TtpMg+PIJIFLHNQqgqHM6BprT9UpSNnxYrT\nR6KSuG7BsZBJG5FupwFEUTM0J+77/xl0cBT4sHX4kVfUckjSd13Ww+Z3BYdCH7s1\n5hsVb6lljdZMLfLnVV486856CilpBJlzvZlipCHv2QPZhxZFYig7yvPWqEHrKr3i\nkuI4Jiz1AguLAMk33GDLxFGGPsGZXCOgUx39T7rmwdcNUn/NyruDDztZszDSGgWb\n9bzcPfmlYAesDsAKZuPEPTlV1qWf0pwMW8nW/d+rIoNDicMnoED1t4dyhhjRdWRv\noyPNu7Xx6y8y7AMZC1yF/ikSdyjuWxMU5ADmZKvYsQKBgQD0faROGs71YskoyH3/\nLd603WdDJZIN0fU5IHa8SUtzdZDli0kWZTv9g0Ktkcpfc6hN66gz7Ah+sCeriAos\nfWUIvXDUlIHng2/3VephppCo4cP8TNEhko/m2R1k7SeMUDn4VDUUijDvsh0TWgPY\n1SefyiaNNPv/sdismkQK+b06sQKBgQC2c3DxBfF+GYAUy+zkiDzxiQS8LpHfbIfA\nsmh0CxVKW6a1xc53xUKyAMshhZRA/8tFr8iGTLqYld2hzZ2ekh8iZl8xXmOdrTQp\nss1mBjqZV22H9kaDiEOKUl7yNFse/MFNz7S00lsbzwHSYOSsVqA+P/NAMOWZUQ1L\nPi9cvIET7wKBgFuYyrq8TnceiHCwFIxKuhoWrL46UCq/U1kQsYs/BnZ+QEfPVBWA\n3eXPjGaMrT3vjcmLlVvGfTRBeMtJz031uKl6l8/8x2JeGs+WL5ZgGeg7lPpsKRmj\n2CfLhbivJNbro5xGqBBG6aiTmVMLsU9GJG84BBN5G0QjdCLONNnL0LoxAoGAXabU\nCmPqmbetLv+eEZB8995FN/MPnYewBxGM3EP0Ib75y8RFPuVaXtRZcFOIzfR++r5I\nR+eKwFfs8+j/Ry3qHVY+9rBkocMOS3kkRYJdAekGqAuaFloTkSTG57xIKZfEAZTk\nRQzVB2kynjJuLqgoiMt6qTBwKkqYcE7zML7x4rECgYAEBUL/xKvnHZvhfqgU/WRi\n3W0zztEZZvDzGA9dGcjRYapyt79dpJs1znVVR75NZyNX0dUnQYDW8EGT2adD84J7\nREEtq0w4AiyQ5jq5gK8oEBQC7nMSuluqy0X4Rksj10FmzYCFw3pNvd9MRQu6wpqp\nlWCzdsPgBGZ+U5ZvBFQuag==\n-----END PRIVATE KEY-----\n",
+  "client_email": "yeon-420@platinum-chain-377308.iam.gserviceaccount.com",
+  "client_id": "105558790480563941565",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/yeon-420%40platinum-chain-377308.iam.gserviceaccount.com"
+}
