@@ -10,6 +10,8 @@ SCOPE = [
 ]
 JSON_FILE_NAME = 'res/platinum-chain-377308-8a26cc2d906e.json'
 
+MONTH_8_SHEET = '23년 8월'
+
 def getSheet(sheet_name):
     doc = getDoc()
     return doc.worksheet(sheet_name)

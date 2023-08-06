@@ -2,6 +2,7 @@ import time
 import re
 import member
 from sheet_util import *
+from util import *
 
 
 def getAllMember():
@@ -32,6 +33,7 @@ def getAllMember():
 
     return member_list
 
+
 def getActivateMemberList():
     worksheet = getSheet(ALL_MEMBER_SHEET)
     range_list = worksheet.range(RANGE)
@@ -60,7 +62,7 @@ def getActivateMemberList():
                     activate_member_list.append(
                         member.Member(temp_member_id, temp_member_name, temp_member_state, temp_join_date, temp_age))
             except Exception as e:
-                print('예외', e)
+                break
 
     return activate_member_list
 
@@ -69,14 +71,13 @@ def member_list_print(list):
     for member in list:
         member.print()
 
+
 def print_member_count(list):
     print('member count : ' + str(len(list)))
 
 
-
 def write_member(sheet_name, member_list):
-    doc = getDoc()
-    worksheet = doc.worksheet(sheet_name)
+    worksheet = getSheet(sheet_name)
     worksheet.update_acell('A1', '이름')
     worksheet.update_acell('B1', '가입일자')
     worksheet.update_acell('C1', '이번달 출석 여부')
@@ -95,15 +96,12 @@ def write_member(sheet_name, member_list):
                 print('끝')
 
 
-
 # def write_live_member_list(sheet_name, member_list):
 #     addSheet(sheet_name, len(member_list), 50)
 #     write_member(sheet_name, member_list)
 
 
 def write_today_member(sheet_name, today_badminton_member):
-    # addSheet(sheet_name, len(member_list), 50)
-    # writeMember(sheet_name, member_list)
     print('write_today_member(sheet_name, str)')
 
     date_match = re.search(r'\d+월 \d+일 [가-힣]+', today_badminton_member)
@@ -136,39 +134,63 @@ def write_today_member(sheet_name, today_badminton_member):
 
     # 결과 출력
     print("날짜:", date)
-    print("장소:", place)
     print("운동 진행 여부:", progress)
+    print("장소:", place)
     print("운동 인원:", participants)
     print("이름 리스트:", names)
 
+    row = get_row_value_from_date(date)
+    worksheet = getSheet(sheet_name)
+    worksheet.update_acell(row + str(3), place)
+    if progress == 'O':
+        worksheet.update_acell(row + str(2), 1)
+    if progress == 'X':
+        worksheet.update_acell(row + str(2), 0)
+        return
+
+    worksheet = getSheet(MONTH_8_SHEET)
+    range_list = worksheet.range('A5:A80')
+    member_column_dict = {}
+    for idx, cell in enumerate(range_list):
+        if cell.value == 'end':
+            break
+        member_column_dict[cell.value] = idx + 5
+    for name in names:
+        if name == '남':
+            continue
+        elif name == '여':
+            continue
+        else:
+            worksheet.update_acell(row + str(member_column_dict[name]), 1)
+
 
 today_badminton_member = '''
-8월 1일 화요일 사종체
+8월 4일 금요일 사종체
 
 운동 진행 여부 : O
 
-운동인원 : 14명
+운동인원 : 15명
 
-신종언
-고태욱
-곽기훈
-구나연
-김동연
-김상윤
-김성연
-김유빈
-류문현
-박예진
-오권영
-유병길
-이은수
-임은진
+곽기훈 00 남
+권세영 00 여
+김대웅 94 남
+김동연 95 남
+김성연 93 남
+김예림 00 여
+김유빈 98 여
+김주혜 97 여
+류문현 00 남
+신준협 95 남
+양승빈 98 남
+이진용 96 남
+임은진 96 여
+정상운 00 남
+조영재 00 남
 '''
 
 if __name__ == '__main__':
-    activate_member_list = getActivateMemberList()
-    print_member_count(activate_member_list)
-
+    # activate_member_list = getActivateMemberList()
     # print_member_count(activate_member_list)
     # member_list_print(activate_member_list)
-    # write_today_member('23년 7월', today_badminton_member)
+    write_today_member('23년 8월', today_badminton_member)
+    # print(get_row_value_from_date('8월 30일 화요일'))
